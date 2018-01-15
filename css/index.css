@@ -1,0 +1,409 @@
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul {
+    list-style: none;
+}
+caption,th {
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+:focus {
+    outline: 0
+}
+input, textarea {
+    margin: 0;
+    padding: 0
+}
+i{
+    font-style: normal;
+}
+/* == clearfix == */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+.clearfix {display: block;}
+@font-face {
+    font-family:PingFangSCMedium;  /*这里是说明调用来的字体名字*/
+    src: url('../fonts/PingFangSCRegular.ttf'); /*这里是字体文件路径*/
+}
+body{
+    font-size: 10px;
+    font-family: PingFangSCMedium;
+    background: #000 url(../images/bg.png) no-repeat center top;
+}
+
+
+
+.wrapper{
+    padding: 0 10px;
+}
+.til{
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+    line-height: 80px;
+}
+
+.chartT{
+    float: left;
+    width: calc((100% - 20px)/3);
+    margin-right: 10px;
+}
+.chartT:nth-of-type(3){
+    margin-right: 0;
+}
+.chartBorder{
+    border: 1px solid #2d3c7e;
+    height: calc(100% - 2px - 50px - 16px);
+    position: relative;
+    padding: 8px;
+}
+.shine{
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -259px;
+}
+.shine01{
+    position: absolute;
+    bottom: -8px;
+    right: -30px;
+}
+.shine02{
+    position: absolute;
+    top: -11px;
+    right: -32px;
+}
+.shine03{
+    position: absolute;
+    bottom: -23px;
+    left: -66px;
+}
+.shine04{
+    position: absolute;
+    top: -10px;
+    left: -36px;
+    width: 50%;
+}
+.shine05{
+    position: absolute;
+    right: -7px;
+    margin-left: -259px;
+    top: 50%;
+    margin-top: -126px;
+}
+.shine06{
+    position: absolute;
+    left: -12px;
+}
+.tittleTil{
+    text-align: center;
+    line-height: 38px;
+    padding-top: 12px;
+    color: #fff;
+    font-size: 26px;
+}
+.chartB{
+    float: left;
+    width: calc((100% - 10px)/2);
+}
+.chartBg{
+    width: 500px;
+    height: 300px;
+    background: #0d1430;
+    position: relative;
+}
+.icon01{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.icon02{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.icon03{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.icon04{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.serviceChart01{
+    width: calc((100% - 8px)/2);
+    height: 100%;
+    float: left;
+}
+.serviceChart02{
+    width: calc((100% - 8px)/2);
+    height: 100%;
+    float: right;
+}
+.serviceChart03{
+    width: calc(100% - 16px);
+    height: calc((100% - 10px - 16px)/2);
+    position: absolute;
+    bottom: 8px;
+}
+
+.map{
+    width:100%;
+    height: 100%;
+}
+.mapCont{
+    float: right;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+.mapCont01{
+    width: calc(100% - 20px - 10px);
+    border: 1px solid #61c8c7;
+    border-radius: 3px;
+    height: calc((100% - 80px)/3);
+    position: relative;
+    padding: 0 10px;
+}
+.mapCont01Til{
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -11px;
+    text-shadow:0px 0px 3px #61c8c7;
+    background: #0d1430;
+    padding: 0 5px;
+}
+.mapCont01 p{
+    margin: 20px 0 10px;
+}
+
+.marketsChart01{
+    width: calc((100% - 8px)/2);
+    height:calc((100% - 10px)/2);
+    float: left;
+}
+.businessChartL{
+    width: calc(55% - 4px);
+    height:100%;
+    float: left;
+}
+.businessChartR{
+    width: calc(45% - 4px);
+    height:100%;
+    float: right;
+}
+.businessChart01{
+    width: 100%;
+    height:calc((100% - 20px)/3);
+    position: relative;
+}
+
+
+#businessChart01{
+    width: 450px;
+    height: 66px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -225px;
+    margin-top: -33px;
+}
+#businessChart01 li{
+    width: 203px;
+    height: 66px;
+    float: left;
+    background: url("../images/pic01.png") no-repeat left center;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+}
+
+#businessChart01 li:last-of-type{
+    float: right;
+}
+#businessChart01 li span:first-of-type{
+    position: absolute;
+    left: 17px;
+    top: 7px;
+    text-align: center;
+    line-height: 21px;
+}
+#businessChart01 li span:first-of-type i{
+    font-size: 30px;
+    color: #fc0342;
+}
+#businessChart01 li span:nth-of-type(2){
+    position: absolute;
+    left: 103px;
+    bottom: 12px;
+}
+
+#businessChart02{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 109px;
+    width: 422px;
+}
+#businessChart02 li{
+    float: left;
+    color: #fff;
+    width: 187px;
+    height: 85px;
+    background: url("../images/pic02.png") no-repeat center;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+
+}
+#businessChart02 li:last-of-type{
+    float: right;
+    background: url("../images/pic03.png") no-repeat center;
+    position: relative;
+    top: 22px;
+}
+.usersNumL{
+    position: absolute;
+    top: 24px;
+    left: 14px;
+}
+.usersNumR{
+    position: absolute;
+    left: 101px;
+    top: 24px;
+}
+#businessChart02 li:last-of-type .usersNumL{
+    top: -20px;
+}
+#businessChart02 li:last-of-type .usersNumR{
+    top: -20px;
+}
+#businessChart02 li span{
+    width: 69px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 9px;
+    border: 1px solid #fff;
+}
+#businessChart02 li span img{
+    vertical-align: middle;
+    padding: 0 3px;
+}
+
+#businessChart03{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 92px;
+    width: 441px;
+
+}
+#businessChart03 li{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 29px;
+    width: 119px;
+    height: 92px;
+    background: url("../images/price01.png") no-repeat center;
+}
+#businessChart03 li div{
+    position: absolute;
+    top: 13px;
+    left: 27px;
+
+}
+#businessChart03 li:nth-of-type(2){
+    left: 107px;
+    background: url("../images/price02.png") no-repeat center;
+
+}
+#businessChart03 li:nth-of-type(3){
+    left: 214px;
+    background: url("../images/price03.png") no-repeat center;
+
+}
+#businessChart03 li:nth-of-type(4){
+    left: 322px;
+    background: url("../images/price04.png") no-repeat center;
+
+}
+#businessChart03 .unit{
+    position: relative;top: -12px;font-size: 8px;
+}
+
+#businessChart04{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 375px;
+    width: 273px;
+    background: url("../images/circle.png") no-repeat center;
+}
+#businessChart04 li{
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    left: 20px;
+    top: 34px;
+    text-align: center;
+}
+#businessChart04 li:nth-of-type(2){
+    left: 20px;
+    top: 203px;
+}
+#businessChart04 li:nth-of-type(3){
+    left: 173px;
+    top: 120px;
+}
+#businessChart04 li:nth-of-type(4){
+    left: 173px;
+    top: 290px;
+}
+
+.sss{
+    background: red;
+}

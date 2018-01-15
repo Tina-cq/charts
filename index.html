@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/highcharts/highcharts.js"></script>
+    <script src="js/highcharts/highcharts-more.js"></script>
+    <script src="js/highcharts/exporting.js"></script>
+    <script src="js/highcharts/data.js"></script>
+    <script src="js/highcharts/highcharts-zh_CN.js"></script>
+
+
+    <script src="js/echart/echarts-all.js"></script>
+
+
+
+
+</head>
+<body>
+<div class="wrapper">
+<p class="til">国网天津市电力公司营销全业务、全过程质量管控及可视化平台</p>
+    <div class="chartT">
+        <p class="tittleTil">客户服务</p>
+        <div class="chartBorder" style="position: relative;">
+            <img style="width: 75%;margin-left: -219px;" class="shine" src="images/line.png" alt=""/>
+
+            <div class="clearfix" style="width: 100%;height: calc((100% - 10px)/2);">
+                <div class="chartBg serviceChart01">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+                    <div id="serviceChart01" style="width:100%;height:100%;"></div>
+                </div>
+                <div class="chartBg serviceChart02">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+                    <div id="serviceChart02" style="width:100%;height:100%;"></div>
+                </div>
+            </div>
+
+            <div class="chartBg serviceChart03">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <div id="serviceChart03" style="width:100%;height:100%;"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="chartT">
+        <p class="tittleTil">实时营销</p>
+        <div class="chartBorder">
+            <img class="shine01" src="images/shine01.png" alt=""/>
+            <img class="shine02" src="images/shine02.png" alt=""/>
+            <img class="shine03" src="images/shine02.png" alt=""/>
+            <img class="shine04" src="images/shine02.png" alt=""/>
+            <img class="shine05" src="images/shine03.png" alt=""/>
+            <img class="shine06" src="images/shine03.png" alt=""/>
+
+            <div class="chartBg map">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+
+                <div id="container" style="width:50%;height:100%;float: left"></div>
+                <div class="mapCont">
+                    <div class="mapCont01" style="margin-top: 10px;">
+                        <span class="mapCont01Til">实时业扩</span>
+                        <p>甲类业务</p>
+                        <span>受理:<i class="num01">80</i></span>　<span>接电:<i class="num02">120</i></span>　<span>完成:<i class="num03">70</i></span>
+
+                    </div>
+                    <div class="mapCont01" style="margin: 25px 0;">
+                        <span class="mapCont01Til">实时业扩</span>
+                        <p>甲类业务</p>
+                        <span>受理:<i class="num01">80</i></span>　<span>接电:<i class="num02">120</i></span>　<span>完成:<i class="num03">70</i></span>
+                    </div>
+                    <div class="mapCont01">
+                        <span class="mapCont01Til">实时业扩</span>
+                        <p>甲类业务</p>
+                        <span>受理:<i class="num01">80</i></span>　<span>接电:<i class="num02">120</i></span>　<span>完成:<i class="num03">70</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chartT">
+        <p class="tittleTil">计量资产</p>
+        <div class="chartBorder" style="position: relative;">
+            <img style="width: 75%;margin-left: -219px;" class="shine" src="images/line.png" alt=""/>
+
+            <div class="clearfix" style="width: 100%;height: calc((100% - 10px)/2);">
+                <div class="chartBg serviceChart01">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+                    <div id="assetsChart01" style="width:100%;height:100%;"></div>
+                    <div style="display:none">
+                        <!-- Source: http://or.water.usgs.gov/cgi-bin/grapher/graph_windrose.pl -->
+                        <table id="freq" border="0" cellspacing="0" cellpadding="0">
+                            <tr nowrap bgcolor="#CCCCFF">
+                                <th colspan="9" class="hdr">Table of Frequencies (percent)</th>
+                            </tr>
+                            <tr nowrap bgcolor="#CCCCFF">
+                                <th class="freq">Direction</th>
+                                <th class="freq">互感器</th>
+                                <th class="freq">电能表</th>
+                                <th class="freq">采集终端</th>
+                            </tr>
+                            <tr nowrap>
+                                <td class="dir">需求</td>
+                                <td class="data">2.81</td>
+                                <td class="data">1.78</td>
+                                <td class="data">3.16</td>
+                            </tr>
+                            <tr nowrap bgcolor="#DDDDDD">
+                                <td class="dir">采购</td>
+                                <td class="data">2.62</td>
+                                <td class="data">1.09</td>
+                                <td class="data">3.00</td>
+                            </tr>
+                            <tr nowrap>
+                                <td class="dir">NE</td>
+                                <td class="data">4.82</td>
+                                <td class="data">0.82</td>
+                                <td class="data">2.07</td>
+                            </tr>
+                            <tr nowrap bgcolor="#DDDDDD">
+                                <td class="dir">ENE</td>
+                                <td class="data">2.59</td>
+                                <td class="data">1.22</td>
+                                <td class="data">3.07</td>
+                            </tr>
+                            <tr nowrap>
+                                <td class="dir">E</td>
+                                <td class="data">4.62</td>
+                                <td class="data">2.20</td>
+                                <td class="data">1.49</td>
+                            </tr>
+                            <tr nowrap bgcolor="#DDDDDD">
+                                <td class="dir">ESE</td>
+                                <td class="data">1.22</td>
+                                <td class="data">2.01</td>
+                                <td class="data">1.55</td>
+                            </tr>
+                            <tr nowrap>
+                                <td class="dir">SE</td>
+                                <td class="data">1.61</td>
+                                <td class="data">3.06</td>
+                                <td class="data">2.37</td>
+                            </tr>
+                            <tr nowrap bgcolor="#DDDDDD">
+                                <td class="dir">SSE</td>
+                                <td class="data">2.04</td>
+                                <td class="data">3.42</td>
+                                <td class="data">1.97</td>
+                            </tr>
+                            <tr nowrap bgcolor="#DDDDDD">
+                                <td class="dir">报表</td>
+                                <td class="data">2.00</td>
+                                <td class="data">1.42</td>
+                                <td class="data">2.97</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="chartBg serviceChart02">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+                    <p style="text-align: center;line-height: 15px;font-size: 12px;color: #fff;">采集指标展示</p>
+                    <div id="assetsChart02" style="width:100%;height:calc(100% - 15px);"></div>
+                </div>
+            </div>
+
+            <div class="chartBg serviceChart03 ">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <p style="text-align: center;padding-top: 4px;font-size: 12px;color: #fff;">四表合一建设</p>
+                <div id="assetsChart03" style="width:100%;height:calc(100% - 15px);"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="chartB" style="margin-right: 10px;">
+        <p class="tittleTil">市场发展</p>
+        <div class="chartBorder">
+            <img class="shine" src="images/line.png" alt=""/>
+
+            <div class="chartBg marketsChart01" style="margin-bottom: 10px;">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <p style="text-align: center;padding-top: 8px;font-size: 12px;color: #fff;">用户增长趋势</p>
+                <div id="marketsChart01" style="width:100%;height:calc(100% - 15px);"></div>
+            </div>
+            <div class="chartBg marketsChart01" style="float: right;margin-bottom: 10px;">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <div id="marketsChart02" style="width:100%;height:100%;"></div>
+            </div>
+            <div class="chartBg marketsChart01">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <p style="text-align: center;padding-top: 8px;font-size: 12px;color: #fff;">容量增长趋势</p>
+                <div id="marketsChart03" style="width:100%;height:calc(100% - 15px);"></div>
+            </div>
+            <div class="chartBg marketsChart01" style="float: right;">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+                <div id="marketsChart04" style="width:100%;height:100%;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="chartB">
+        <p class="tittleTil">营业成果</p>
+        <div class="chartBorder">
+            <img class="shine" src="images/line.png" alt=""/>
+
+            <div class="businessChartL">
+                <div class="chartBg businessChart01">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+
+                    <div id="businessChart01">
+                        <ul>
+                            <li>
+                                <span><i>80</i><br/>亿千瓦时</span>
+                                <span>年计划售电量</span>
+                            </li>
+                            <li>
+                                <span><i>280</i><br/>亿千瓦时</span>
+                                <span>年计划售电量</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chartBg businessChart01" style="margin: 10px 0;">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+
+                    <div id="businessChart02">
+                        <ul>
+                            <li>
+                                <div class="usersNumL">
+                                    申请户数<br/><i style="font-size: 24px;color: #ffea94;line-height: 20px;">80</i><br/><i style="font-size: 10px;position: relative;top: -3px;">万户</i><br/>
+                                    <span>同比<img src="images/arrowDown.png" alt=""/><i>4%</i></span>
+                                </div>
+                                <div class="usersNumR">
+                                    申请户数<br/><i style="font-size: 24px;color: #ffea94;line-height: 20px;">120</i><br/><i style="font-size: 10px;position: relative;top: -3px;">万户</i><br/>
+                                    <span>同比<img src="images/arrowUp.png" alt=""/><i>12%</i></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="usersNumL">
+                                    <span style="margin-bottom: 6px;">同比<img src="images/arrowDown.png" alt=""/><i>4%</i></span><br/>
+                                    申请户数<br/><i style="font-size: 24px;color: #ffea94;line-height: 20px;">80</i><br/><i style="font-size: 10px;position: relative;top: -3px;">万千伏安</i><br/>
+                                </div>
+                                <div class="usersNumR">
+                                    <span style="margin-bottom: 6px;">同比<img src="images/arrowUp.png" alt=""/><i>12%</i></span><br/>
+                                    申请户数<br/><i style="font-size: 24px;color: #ffea94;line-height: 20px;">120</i><br/><i style="font-size: 10px;position: relative;top: -3px;">万千伏安</i><br/>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chartBg businessChart01">
+                    <img class="icon01" src="images/icon01.png" alt=""/>
+                    <img class="icon02" src="images/icon02.png" alt=""/>
+                    <img class="icon03" src="images/icon03.png" alt=""/>
+                    <img class="icon04" src="images/icon04.png" alt=""/>
+
+                    <div id="businessChart03">
+                        <ul>
+                            <li>
+                                <div>
+                                    目标均价<br/>
+                                    <i style="font-size: 24px;color: #ffea94;">80</i><br/>
+                                    <i class="unit">元/千千瓦时</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span style="position: absolute;top: -17px;width: 57px;left: 0;font-size: 10px;">同比<img style="width: 6px;padding: 0 2px;" src="images/arrowDown.png" alt=""/><i>20%</i></span>
+                                    用户均价<br/>
+                                    <i style="font-size: 24px;color: #ffea94;">80</i><br/>
+                                    <i class="unit">元/千千瓦时</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    销售均价<br/>
+                                    <i style="font-size: 24px;color: #ffea94;">80</i><br/>
+                                    <i class="unit">元/千千瓦时</i>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    代征均价<br/>
+                                    <i style="font-size: 24px;color: #ffea94;">80</i><br/>
+                                    <i class="unit">元/千千瓦时</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="businessChartR chartBg">
+                <img class="icon01" src="images/icon01.png" alt=""/>
+                <img class="icon02" src="images/icon02.png" alt=""/>
+                <img class="icon03" src="images/icon03.png" alt=""/>
+                <img class="icon04" src="images/icon04.png" alt=""/>
+
+                <div id="businessChart04">
+                    <ul>
+                        <li>年应收电费<br/><i style="font-size: 30px;color: #ffea94;">80</i><i style="font-size: 14px;">亿元</i></li>
+                        <li>年欠费金额<br/><i style="font-size: 30px;color: #ffea94;">35</i><i style="font-size: 14px;">亿元</i></li>
+                        <li>年应收电费<br/><i style="font-size: 30px;color: #ffea94;">80</i><i style="font-size: 14px;">亿元</i></li>
+                        <li>年电费回收率<br/><i style="font-size: 30px;color: #ffea94;">50</i><i style="font-size: 14px;">%</i></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<script>
+    var screenH=document.documentElement.clientHeight;
+    $(".chartT").height((screenH-80-10)/2);
+    $(".chartB").height((screenH-80-10)/2);
+
+    $("#businessChart03 li").hide();
+    var timer01=setTimeout(function(){
+        $("#businessChart03 li:nth-of-type(1)").fadeIn();
+        clearTimeout(timer01);
+    },300);
+    var timer02=setTimeout(function(){
+        $("#businessChart03 li:nth-of-type(2)").fadeIn();
+        clearTimeout(timer02);
+    },500);
+    var timer03=setTimeout(function(){
+        $("#businessChart03 li:nth-of-type(3)").fadeIn();
+        clearTimeout(timer03);
+    },700);
+    var timer04=setTimeout(function(){
+        $("#businessChart03 li:nth-of-type(4)").fadeIn();
+        clearTimeout(timer04);
+    },900);
+</script>
+<script src="js/serviceChart01.js"></script>
+<script src="js/serviceChart02.js"></script>
+<script src="js/serviceChart03.js"></script>
+<script src="js/map.js"></script>
+<script src="js/assetsChart01.js"></script>
+<script src="js/assetsChart02.js"></script>
+<script src="js/assetsChart03.js"></script>
+<script src="js/marketsChart01.js"></script>
+<script src="js/marketsChart02.js"></script>
+<script src="js/marketsChart03.js"></script>
+<script src="js/marketsChart04.js"></script>
+
